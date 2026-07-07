@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A90E2">
+  <title>Aplikasi Catatan GH Melon</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Menghubungkan Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header>
+    <h1>📝 Catatan Kegiatan GH Melon</h1>
+  </header>
+  
+  <main>
+    <div class="input-container">
+      <input type="text" id="noteInput" placeholder="Tulis catatan baru...">
+      <button id="addBtn">Tambah</button>
+    </div>
+    <ul id="noteList"></ul>
+  </main>
+	<div class="sync-container">
+  <input type="password" id="githubToken" placeholder="Masukkan GitHub Token (ghp_...)">
+  <div class="sync-buttons">
+    <button id="uploadBtn">☁️ Unggah ke Cloud</button>
+    <button id="downloadBtn">📥 Unduh dari Cloud</button>
+  </div>
+</div>
+
+  <!-- Menghubungkan Logika Aplikasi & Service Worker -->
+  <script src="app.js"></script>
+</body>
+</html>
